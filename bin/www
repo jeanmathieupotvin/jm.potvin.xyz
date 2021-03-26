@@ -1,0 +1,115 @@
+#!/usr/bin/env node
+
+/**
+ * =============================================================================
+ * Node server
+ * =============================================================================
+ * 
+ * This file handles low-level server stuff. It is executed first by npm. To
+ * launch it, see package.json.
+ *   - dev  : npm run devstart
+ *   - test : npm run serverstart
+ *   - prod : npm run start
+ */
+
+/**
+ * =============================================================================
+ * Shebang lines (#!)
+ * =============================================================================
+ * 
+ * The #! line above is called a shebang and is a Linux programming convetion:
+ * executables should not have a file extension. If a file is marked as being an
+ * executable (using command chmod) and the first line contains a shebang then
+ * what follows the shebang is executed first.
+ * 
+ * Therefore, to develop a command-line program in NodeJS, all you
+ * need to do is start the file with #!/usr/bin/env node. The env command 
+ * will find the correct install path of node. Then use chmod to make the file
+ * executable (chmod +x my-script.js) and remove extension.
+ * 
+ * Source: StackOverflow (https://stackoverflow.com/questions/56975641/).
+ * 
+ * The /usr/bin/env part works only for Unix. It is ignored in Windows, but npm
+ * manages cross-platform compatibility through npm commands. These are defined
+ * in package.json.
+ */
+
+/**
+ * =============================================================================
+ * Dependencies
+ * =============================================================================
+ */
+
+// Import packages.
+// We pass namespace 'jm.potvin.xyz:server' to debug. It logs events
+// that are specific to this namespace (the server object below).
+const http  = require('http');
+const debug = require('debug')('jm.potvin.xyz:server');
+
+// Import app.
+const app = require('../index');
+
+/**
+ * =============================================================================
+ * Instantiate HTTP server
+ * =============================================================================
+ */
+
+// Get port from environment, normalize it, and set it.
+const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+// Start server. Listen on supplied port.
+const server = http.createServer(app);
+server.listen(port);
+
+// Set callbacks.
+server.on('error', onError);
+server.on('listening', onListening);
+
+/**
+ * =============================================================================
+ * Callbacks, functions
+ * =============================================================================
+ */
+
+// Normalize a port into a number, string, or false.
+// Attempt is made to parse val into a number. If it's not, then it's a string
+// naming a pipe. Else, we check if it's greater than 0. If it is, then it's a
+// port number and we return it. Else, we return a falsy value.
+function normalizePort(val) {
+  const port = parseInt(val, 10);
+  return isNaN(port) ? val : (port >= 0) ? port : false;
+}
+
+// Callback for errors.
+function onError(error) {
+  // If event does not stem from listening event, then just throw the error.
+  if (error.syscall !== 'listen') {
+      throw error;
+  }
+  // Create custom string based from port.
+  let portString = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
+  // Construct friendly messages from standard error codes.
+  switch (error.code) {
+      case 'EACCES':
+          console.error(`${portString} requires elevated privileges.`);
+          process.exit(1);
+          break;
+      case 'EADDRINUSE':
+          console.error(`${portString} is already in use.`);
+          process.exit(1);
+          break;
+      default:
+          throw error;
+  }
+}
+
+// Callback for listening event.
+function onListening() {
+  let addr = server.address();
+  let bind = typeof addr === 'string'
+    ? `pipe ${addr}`
+    : `port ${addr.port}`;
+  debug(`Listening on ${bind}.`);
+}

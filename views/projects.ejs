@@ -1,0 +1,317 @@
+<!-- Copyright (c) Jean-Mathieu Potvin (2021). All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<%- include("components/head"); -%>
+
+<body class="grid">
+
+  <%- include("components/header"); -%>
+
+  <!-- Page navigation menu for big screens -->
+  <nav class="grid-toc-r">
+    <ol class="page-nav nolist">
+      <li>
+        <a href="#2021" target="_self">2021</a>
+        <ol class="nolist">
+          <li><a href="#blueprint" target="_self">Blueprint</a></li>
+          <li><a href="#potvin" target="_self">potvin.xyz (version 1.0.0)</a></li>
+          <li><a href="#ra" target="_self">Risk Accumulation</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#2020" target="_self">2020</a>
+        <ol class="nolist">
+          <li><a href="#fs" target="_self">Flood Simulators</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#2019" target="_self">2019</a>
+        <ol class="nolist">
+          <li><a href="#qch" target="_self">Quebec's hydrometry (qch)</a></li>
+        </ol>
+      </li>
+      <li>
+        <a href="#2018" target="_self">2018</a>
+        <ol class="nolist">
+          <li><a href="#floodrisk" target="_self">Pricing river flood risk</a></li>
+        </ol>
+      </li>
+      <li><a href="/projects" target="_self"><i class="fas fa-arrow-up"></i>&nbsp; Go to top</a></li>
+    </ol>
+  </nav>
+
+  <!-- Main contents -->
+  <main class="grid-main main flex-col">
+
+    <!-- 2021 -->
+    <section id="2021" class="section">
+      <h1 class="cards-year">2021</h1>
+
+      <!-- Blueprint -->
+      <div id="blueprint" class="card">
+        <img class="card-media" src="/images/projects/blueprint.jpg" alt="Blueprint's image" width="600" height="283" />
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>Blueprint</h1>
+            <h2>Efficient data schemas for <i class="fab fa-r-project"></i></h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              An unopinionated and consistent interface to generate all sorts of
+              data schemas in R. Schemas are R objects that dictate what other R
+              objects should contain and how they should be structured. Schemas
+              behave a little bit like promises by providing descriptions of
+              future bindings.
+            </p>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>R
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>
+              <a class="link" href="https://github.com/jeanmathieupotvin/blueprint" target="_blank" rel="noopener">
+                jeanmathieupotvin/blueprint</a>
+            </div>
+            <div>
+              <i class="fas fa-gavel"></i>
+              <a class="link" href="https://github.com/jeanmathieupotvin/blueprint/blob/main/LICENSE" target="_blank" rel="noopener">
+                MIT License</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <!-- potvin.xyz version 1.0.0 -->
+      <div id="potvin" class="card">
+        <img class="card-media" src="/images/projects/potvin-xyz.jpg" alt="potvin.xyz's image" width="600" height="291" />
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>potvin.xyz</h1>
+            <h2>A fresh start for my personal website</h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              A revamped, simple, and cool-looking, personal website. The intent
+              was to rely on modern web development tools whenever it was possible:
+              NodeJS, HTML5 semantic markup, CSS Flexbox, CSS Grid, CSS variables,
+              etc. No framework, no big files, no NPM packages. Pure lightness!
+            </p>
+              Personal websites are usually boring, and I wanted mine to be a
+              little bit more <i>flashy</i>. Screw usual corporate styles, and
+              embrace these bright colors! The long-term objective is to maintain
+              this website, keep it simple and fun, and use it as a showcase of
+              my skills.
+            </p>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>HTML, CSS, JS, NodeJS, EJS, MongoDB
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>&nbsp;
+              <a class="link" href="https://github.com/jeanmathieupotvin/jm.potvin.xyz" target="_blank" rel="noopener">
+                jeanmathieupotvin/jm.potvin.xyz</a>
+            </div>
+            <div>
+              <i class="fas fa-gavel"></i>All rights reserved
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <!-- Risk Accumulation -->
+      <div id="ra" class="card">
+        <img class="card-media" src="/images/projects/ra.jpg" alt="Risk Accumulation's image" width="600" height="277" />
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>Risk Accumulation</h1>
+            <h2>Analyze the concentration of exposure</h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              A collection of live web tools to explore the geographic distribution
+              of an insurer's book of business. These tools are centralized under
+              a unified interface (a web application) called <i>CHARM Platform</i>.
+              They assess and monitor large-scale concentration over time and
+              exposure to plausible catastrophic events.
+            </p>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>R, HTML, CSS, JS, SQL
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>Closed source
+            </div>
+            <div>
+              <i class="fas fa-gavel"></i>
+              <a class="link "href="https://www.cooperators.ca/en" target="_blank" rel="noopener">
+                The Co-operators</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2020 -->
+    <section id="2020" class="section">
+      <h1 class="cards-year">2020</h1>
+
+      <!-- Flood Simulators -->
+      <div id="fs" class="card">
+        <img class="card-media" src="/images/projects/fs.jpg" alt="Flood Simulators' image" width="600" height="277" />
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>Flood Simulators</h1>
+            <h2>Large-scale simulations of flood losses</h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              A collection of multiple sub-models to simulate plausible dependent
+              flood losses stemming from either fluvial or coastal flood events.
+              Instead of relying on unreliable historical flood losses, we devised
+              a pipeline of statistical, geospatial and physics-based models. The
+              resulting meta-model was automated and encapsulated into an internal
+              <i class="fab fa-r-project"></i> package for convenience. This model
+              is a generalization of 
+              <a class="link" href="https://doi.org/10.1080/10920277.2019.1667830" target="_blank" rel="noopener">
+                Boudreault et al. (2019)</a>. It works on any insurance book of
+              habitational products.
+            </p>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>R
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>Closed source
+            </div>
+            <div>
+              <i class="fas fa-gavel"></i>
+              <a class="link "href="https://www.cooperators.ca/en" target="_blank" rel="noopener">
+                The Co-operators</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2019 -->
+    <section id="2019" class="section">   
+      <h1 class="cards-year">2019</h1>
+
+      <!-- Quebec's hydrometry -->
+      <div id="qch" class="card">
+        <img class="card-media" src="/images/projects/qch.jpg" alt="qch package's image" width="600" height="333"/>
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>Quebec's hydrometry</h1>
+            <h2>Fetch Quebec's hydrological data in <i class="fab fa-r-project"></i></h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              A modern <i class="fab fa-r-project"></i> API to get river flows,
+              river levels and gauging stations metadata easily from the web.
+              This package provides an easy-to-use and fully automated API to
+              fetch and format data stemming from the usual CEHQ, MDDELCC and
+              MELCC websites. Standardized databases are created from these
+              sources.
+            </p>
+            <div class="block-grid alert">
+              <div class="block-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <div class="block-text">
+                I will rebuild this package from scratch in 2021 and open-source
+                it. It is an essential tool for anyone trying to do serious flood
+                modelling and/or flood risk assessment.
+              </div>
+            </div>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>R
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>Closed source
+            </div>
+            <div>
+              <i class="fas fa-gavel"></i>
+              <a class="link "href="https://www.cooperators.ca/en" target="_blank" rel="noopener">
+                The Co-operators</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2018 -->
+    <section id="2018" class="section">
+      <h1 class="cards-year">2018</h1>
+
+      <!-- Pricing River Flood Risk -->
+      <div id="floodrisk" class="card">
+        <img class="card-media" src="/images/projects/floodrisk.jpg" alt="Pricing River Flood Risk's image" width="600" height="320" />
+        <div class="card-text">
+          <!-- Title -->
+          <header>
+            <h1>Pricing river flood risk</h1>
+            <h2>A general pricing methodology for river flood risk</h2>
+          </header>
+          <!-- Description -->
+          <main>
+            <p>
+              <strong>Short abstract.</strong> In this paper, we design a 
+              hierarchical flood risk model that allows an assessment at the
+              individual level. Our model relies on a chain of physics-based 
+              climate, hydrological, and hydraulics modules combined with civil
+              engineering methods to map the distribution of individual flood 
+              losses at high resolution. Building on such approach, we design 
+              pricing and segmentation methods tailored for flood risk
+              management. We then apply the methods to study flood risk in a small
+              city in the province of Quebec. We calculate premiums, analyze the
+              impacts of risk sharing, set pricing territories consistent with
+              the spatial flood risk, and finally, quantify the impact of greenhouse
+              gas emission scenarios on individual and aggregate losses, premiums,
+              and tail risk measures.
+            </p>
+          </main>
+          <!-- Code, location, license -->
+          <footer>
+            <div>
+              <i class="fas fa-terminal"></i>R
+            </div>
+            <div>
+              <i class="fas fa-code-branch"></i>
+              <a class="link" href="https://doi.org/10.1080/10920277.2019.1667830" target="_blank" rel="noopener">
+                North American Actuarial Journal, 24:2, 251-274</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- include("components/footer"); -%>
+
+</body>
+
+</html>

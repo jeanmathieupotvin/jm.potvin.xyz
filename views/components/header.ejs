@@ -1,0 +1,46 @@
+<header class="grid-head head-outer">
+
+  <div class="head">
+
+    <!-- Headshot -->
+    <!-- Hidden on index -->
+    <img class="head-shot noshow" src="/images/favicon-32x32.png" alt="JM's small headshot" height="32" width="32" />
+
+    <!-- Title -->
+    <h1 class="head-title">Jean-Mathieu Potvin</h1>
+    <h1 class="head-title-mobile">J-M Potvin</h1>
+
+    <!-- Nav menu embedded in header -->
+    <!-- Hidden on small screens -->
+    <nav class="head-nav">
+      <%- include("nav"); -%>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <!-- Hidden on large screens -->
+    <!-- Contents changes if menu is opened -->
+    <button id="mobile-nav-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <!-- Hidden on large screen -->
+  <div class="mobile-menu">
+    <nav class="mobile-nav">
+      <%- include("nav"); -%>
+    </nav>
+
+    <footer>
+      <div class="social-info">
+        <a class="btn white" href="mailto:jm@potvin.xyz">jm@potvin.xyz</a>
+        <div class="social-nets">
+          <%- include("social"); -%>
+        </div>
+      </div>
+      <p>
+        Part of <a href="/" target="_self">potvin.xyz</a>. Version <%= version %>.
+      </p>
+    </footer>
+  </div>
+</header>

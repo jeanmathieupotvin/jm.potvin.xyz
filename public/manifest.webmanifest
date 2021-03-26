@@ -1,0 +1,25 @@
+{
+    "name": "jm.potvin.xyz",
+    "short_name": "jm.potvin.xyz",
+    "description": "The personal website of Jean-Mathieu Potvin",
+    "dir": "ltr",
+    "lang": "en",
+    "display": "standalone",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "theme_color": "#fcfcfc",
+    "background_color": "#fcfcfc",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/images/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

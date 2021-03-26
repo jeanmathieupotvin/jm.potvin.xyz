@@ -1,0 +1,247 @@
+<!-- Copyright (c) Jean-Mathieu Potvin (2021). All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<%- include("components/head"); -%>
+
+<body class="grid">
+
+  <%- include("components/header"); -%>
+
+  <!-- Page navigation menu for big screens -->
+  <nav class="grid-toc-r">
+    <ol class="page-nav nolist">
+      <li><a href="#what">What am I</a></li>
+      <li>
+        <a href="#do">What I do</a>
+        <ol class="nolist">
+          <li><a href="#do-research"><i class="fas fa-cloud-showers-heavy"></i>&nbsp; As a research professional</a></li>
+          <li><a href="#do-dev"><i class="fas fa-code"></i> As a developer</a></li>
+        </ol>
+      </li>
+      <li><a href="#bg">What is my background</a></li>
+      <li><a href="#brag">What is my setup</a></li>
+      <li><a href="/about"><i class="fas fa-arrow-up"></i>&nbsp; Go to top</a></li>
+    </ol>
+  </nav>
+
+  <!-- Main contents -->
+  <main class="grid-main main">
+
+    <!-- What am I -->
+    <section id="what" class="section">
+      <h1>What am I</h1>
+      <article class="article">
+        <p>
+          Jean-Mathieu. An instance of class Human, which here can be defined as
+          a fuzzy collection of atoms interacting through quantum fields. If we
+          accept the
+          <a class="link" href="https://en.wikipedia.org/wiki/Copenhagen_interpretation" target="_blank" rel="noopener">
+            Copenhagen interpretation</a> of quantum mechanics, we could even
+          say that I am <i>me</i> because <i>you</i>, as external observers,
+          force the collapse of my wave function.
+        </p>
+        <div class="block info">
+          Now, you should be conviced that I am truly passionate about science.
+          You are a quantum physics expert and you think I am wrong? Please,
+          <a class="link" href="mailto:jm@potvin.xyz" target="_blank" rel="noopener">
+            send me an e-mail</a>, we could chat about it!
+          </div>
+      </article>
+    </section>
+
+    <!-- What I do -->
+    <section id="do" class="section">
+      <h1>What I do</h1>
+      <article class="article">
+        <p>
+          I strive to become the perfect hybrid between a
+          <mark class="keyword">developer</mark> and a
+          <mark class="keyword">research professional</mark>. I want to have
+          full control over what I do and be able to deliver analytical solutions
+          along with a modern and robust implementation.
+        </p>
+      </article>
+
+      <!-- What I do as a researcher -->
+      <article id="do-research" class="article">
+        <h2><i class="fas fa-cloud-showers-heavy"></i> As a research professional</h2>
+        <p>
+          My core expertise is centered around flood modelling and flood
+          insurance. Therefore, I am usually interested by these following topics:
+
+          <ul class="nolist">
+            <li><i class="fas fa-wind"></i>&nbsp; meterological perils,</li>
+            <li><i class="fas fa-water"></i>&nbsp; natural catastrophes and</li>
+            <li><i class="fas fa-temperature-high"></i>&nbsp; climate change.</li>
+          </ul>
+
+          This list is not exhaustive, I like to picture myself as a free
+          electron.
+        </p>
+      </article>
+
+      <!-- What I do as a dev -->
+      <article id="do-dev" class="article">
+        <h2><i class="fas fa-code"></i> As a developer</h2>
+
+        <!-- Statistical modelling -->
+        <h3>Modelling pipelines</h3>
+        <p>
+          I consider myself an expert of the
+          <a class="link" href="https://www.r-project.org/" target="_blank" rel="noopener">R programming language</a>.
+          I am most probably not a
+          <a class="nowrap link" href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/Internal.html" target="_blank" rel="noopener">
+            true wizard</a>, but I still know a lot on it. I have had the chance
+          to develop <a class="link" href="/projects">several packages</a> for it.
+          In my humble opinion, nothing beats the diversity of R's ecosystem
+          when it comes to statistical learning and modelling.
+        </p>
+
+        <!-- Front-end -->
+        <h3>Front-end and applications</h3>
+        <p>
+          Aside from R, I aspire to become a full-stack web developer by focusing
+          on modern HTML, CSS and JavaScript (ES6+). For the latter, I use
+
+          <ul class="nolist">
+            <li><i class="fas fa-server"></i>&nbsp; NodeJS for back-end,</li>
+            <li><i class="fas fa-database"></i>&nbsp; MongoDB for NoSQL databases' operations and</li>
+            <li><i class="fas fa-exchange-alt"></i>&nbsp; Vanilla DOM API for (client-side) front-end. Call me a
+              <i>masochist</i>, but I actually like it quite a lot.
+            </li>
+          </ul>
+        </p>
+        <p>
+          The world of web design evolves at an almost impossible pace. Because
+          of that, I try to stay as close as I can to the languages. However,
+          there are promising frameworks and I am looking forward to learn
+          new tools such as web components in the future. I would also like to
+          learn at least one major JS framework such as Angular, React or Svelte.
+          
+          Consult
+          my <a class="link nowrap" href="https://github.com/users/jeanmathieupotvin/projects/3" target="_blank" rel="noopener">
+            personal Kanban board</a> for more information.
+        </p>
+
+        <!-- Back-end -->
+        <h3>Low-level computations</h3>
+        <p>
+          For speed and efficiency, I favor the C programming language, because
+          of its tight integration with R, but I am definitely
+          <strong>not</strong> an expert of this language. Recently, I
+          discovered that <a class="link" href="https://www.rust-lang.org/" target="_blank" rel="noopener">
+            Rust</a> could be embedded in R, so I may try it in a near-future.
+        </p>
+      </article>
+    </section>
+
+    <!-- What is my background -->
+    <section id="bg" class="section">
+      <h1>What is my background</h1>
+      <article class="article">
+        <p>
+          My background is centered around <mark class="keyword">actuarial science</mark>.
+          According to the
+          <a class="link" href="https://www.lexico.com/en/definition/actuary" target="_blank" rel="noopener">
+            Oxford Dictionary</a>, an <i>actuary</i> is
+          <q cite="https://www.lexico.com/en/definition/actuary">a person who
+            compiles and analyzes statistics and uses them to calculate
+            insurance risks and premiums</q>. I usually argue that this
+          definition is well suited to traditional actuarial business but
+          <strong>fails</strong> to define modern actuarial science.
+        </p>
+        <p>
+          Actuarial science is all about recognizing and understanding the
+          <mark class="keyword">stochastic nature of systems</mark>. It
+          lies at the intersection of mathematics, statistics, machine learning,
+          computer science, finance and other related fields such as physics.
+          This depends on the context.
+        </p>
+        <p>
+          To price a risk you must first understand its stochastic behavior.
+          To understand it, you need a simplified representation, a <i>model</i>.
+          A modern actuary has a unique skillset and exceptional analysis skills.
+        </p>
+        <div class="block info">
+          Actuaries are just statisticians who developed a large set of very
+          efficient concepts on top of statistics.
+        </div>
+      </article>
+    </section>
+
+    <!-- What is my setup -->
+    <section id="brag" class="section">
+      <h1>What is my setup</h1>
+      <article class="article">
+        <p>
+          For those who are curious, this is the <i class="fas fa-hashtag"></i>brag
+          section. The table below gives some information on my current local
+          development setup. In the future, I am planning to build a cluster of
+          multiple <a class="link" href="https://www.raspberrypi.org/products/compute-module-3-plus/" target="_blank"  rel="noopener">
+            Raspberry Pi Compute Modules</a> to deploy and test containers and
+          defer parallel computations more easily.
+        </p>
+        <div>
+          <table class="block info table">
+            <tbody>
+              <tr>
+                <td style="width: 20%;">Machine</td>
+                <td style="width: 80%;">Dell G5 2019, canadian version (G5590-7803BLK-PCA)</td>
+              </tr>
+              <tr>
+                <td>OSs</td>
+                <td>Windows 10 Home v1909 + Ubuntu 20.10 in dual-boot (via GRUB)</td>
+              </tr>
+              <tr>
+                <td>CPU</td>
+                <td>Intel Core i7-9750H, 6 cores, 12 threads (9<sup>th</sup> generation)</td>
+              </tr>
+              <tr>
+                <td rowspan="4">HDDs</td>
+                <td>Samsung SSD 970 EVO Plus V-NAND NVME M.2 2280 500GB (main)</td>
+              </tr>
+              <tr>
+                <td>Samsung SSD 860 EVO 2.5'' SATA III 1TB (secondary)</td>
+              </tr>
+              <tr>
+                <td>Samsung SSD T5 2.5'' USB 3.1 V-NAND 1TB (data)</td>
+              </tr>
+              <tr>
+                <td>Samsung SSD T5 2.5'' USB 3.1 V-NAND 500GB (personal)</td>
+              </tr>
+              <tr>
+                <td>RAM</td>
+                <td>2 <i class="fas fa-times"></i> Crucial DDR4 SODIMM 2666Mhz 16GB</td>
+              </tr>
+              <tr>
+                <td>GPU</td>
+                <td>NVIDIA Geforce RTX 2060 6GB GDDR6</td>
+              </tr>
+              <tr>
+                <td>Dock</td>
+                <td>Dell Thunderbolt WD19TB (180W)</td>
+              </tr>
+              <tr>
+                <td>Screen</td>
+                <td>2 <i class="fas fa-times"></i> HP 24es IPS 23.8in</td>
+              </tr>
+              <tr>
+                <td>Peripherals</td>
+                <td>
+                  Logitech MX Keys<br/>
+                  Logitech MX Master 3
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <%- include("components/footer"); -%>
+
+</body>
+
+</html>

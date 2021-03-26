@@ -1,0 +1,44 @@
+{
+  "name": "jm.potvin.xyz",
+  "version": "1.0.0",
+  "description": "The personal website of Jean-Mathieu Potvin",
+  "author": "Jean-Mathieu Potvin",
+  "license": "All Rights Reserved",
+  "private": true,
+  "keywords": [
+    "developer",
+    "research",
+    "profesional",
+    "jmp",
+    "jean",
+    "mathieu",
+    "potvin"
+  ],
+  "homepage": "https://github.com/jeanmathieupotvin/jm.potvin.xyz#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanmathieupotvin/jm.potvin.xyz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jeanmathieupotvin/jm.potvin.xyz/issues"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "set DEBUG=express:* & node ./bin/www",
+    "minifycss": "postcss ./public/stylesheets/main.css > ./public/stylesheets/main.min.css",
+    "minifynorm": "postcss ./public/stylesheets/normalize.css > ./public/stylesheets/normalize.min.css"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "is-svg": ">=4.2.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1"
+  }
+}

@@ -1,0 +1,51 @@
+<!-- Copyright (c) Jean-Mathieu Potvin (2021). All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<%- include("components/head"); -%>
+
+<body>
+  <div class="grid index-outer">
+    <%- include("components/header"); -%>
+
+    <main class="grid-main index">
+
+      <!-- Headshot -->
+      <img id="jm-img" class="index-jm-img" src="/images/me-375x375.jpg" alt="Jean-Mathieu's picture" width="375" height="375" />
+
+      <!-- Cool mode switch -->
+      <!-- Change img above -->
+      <div class="sw-outer">
+        <div class="sw-label sw-label-active"><i class="fas fa-user-tie"></i></div>
+        <input id="sw-cool-mode" class="sw" type="checkbox" value="off" />
+        <div class="sw-label"><i class="fas fa-glasses"></i></div>
+      </div>
+
+      <!-- Title / motto -->
+      <h2 class="index-jm-motto">
+        Dedicated to natural catastrophes and beautiful code.
+      </h2>
+
+      <!-- Introduction -->
+      <p class="index-jm-desc">
+        Hi! I am Jean-Mathieu, a science enthusiast passionate about
+        <mark class="keyword">computers</mark>.
+        <mark class="keyword">Mathematics</mark>.
+        <mark class="keyword">Statistics</mark>.
+        Quite an intense person when it comes to geeky stuff. I am first and
+        foremost a flood insurance specialist with a strong actuarial background.
+        I have been working as a Research & Innovation Analyst at
+        <a class="link" href="https://www.cooperators.ca/en/insurance.aspx" target="_blank" rel="noopener">
+          The Co-operators</a>, a Canadian insurance co-operative for the past
+        three years. I am also a founding member of the 
+        <a class="link" href="https://pomol-ai.org" target="_blank" rel="noopener">
+          Pomol AI</a> (temporary name) organization.
+      </p>
+    </main>
+
+    <%- include("components/footer"); -%>
+  </div>
+
+</body>
+
+</html>

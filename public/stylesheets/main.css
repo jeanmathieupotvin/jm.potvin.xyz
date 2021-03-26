@@ -1,0 +1,861 @@
+/* =============================================================================
+ * Parameters
+ * =============================================================================
+ */
+
+:root {
+  /* Colors */
+  --white: #fcfcfc;
+  --sand: #FEFEDF;
+  --yellow: #f9f871;
+  --peach: #FF9671;
+  --deep-purple-lighter: rgba(111, 64, 255, 0.25);
+  --deep-purple: #6f40ff;
+  --deep-blue: #18025B;
+  --gray-lighter: #70878D;
+  --gray-light: #404040;
+  --gray-dark-light: rgba(54, 54, 54, 0.75);
+  --gray-dark: #363636;
+  /* Fonts, text */
+  --font-size-std: 16px;
+  --font-family: 'Lato', sans-serif;
+  --font-family-title: 'Ubuntu', sans-serif;
+  /* Borders */
+  --border-radius: 3px;
+  /* Dimensions */
+  --head-height: 60px;
+  --head-max-width: 1175px;
+  --main-max-width: 900px;
+  --foot-max-width: 900px;
+  /* Padding, margins */
+  --padding: 0 20px;
+}
+
+/* =============================================================================
+ * Layout
+ * =============================================================================
+ */
+
+.grid {
+  display: grid;
+  grid-template-rows: 
+    var(--head-height)
+    minmax(calc(100vh - var(--head-height)), auto)
+    auto;
+  grid-template-columns:
+    1fr
+    minmax(auto, var(--main-max-width))
+    1fr;
+  grid-template-areas:
+    "head   head  head"
+    "toc-l  main  toc-r"
+    "foot   foot  foot";
+  justify-content: center;
+  align-content: center;
+}
+.grid-head {
+  grid-area: head;
+  justify-self: stretch;
+}
+.grid-main {
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+}
+.grid-toc-r {
+  grid-area: toc-r;
+}
+.grid-foot {
+  grid-area: foot;
+}
+/* General purpose containers */
+.grid-2c-flex {
+  display: grid;
+  /* Columns will span a minimal 280px, then
+     equally expand for full width. If they 
+     cannot, they flow into rows instead. */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 20px;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================================================================
+ * Document level adjustments
+ * =============================================================================
+ */
+
+html {
+  font-size: var(--font-size-std);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+/* =============================================================================
+ * Route: index
+ * =============================================================================
+ */
+
+.index-outer {
+  font-size: 1rem; /* Scaling relative to document level */
+  background-image: url(/images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.index {
+  /* Standard padding is added below 940px width (20px * 2 + main max width) */
+  color: var(--white);
+  margin: 20px auto;
+  padding: 0;
+}
+.index a {
+  color: var(--white);
+}
+.index-jm-img {
+  display: block;
+  margin: auto;
+  height: auto;
+  width: 60vw; /* Capped at 400px, else 20vw padding on each side */
+  max-width: 375px;
+  border-radius: 50%;
+}
+.index-jm-motto {
+  margin: 30px 0;
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center; /* Needed if text wraps */
+}
+.index-jm-desc {
+  margin: auto 0;
+  padding: 10px;
+  font-size: 1.15em;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+  border-radius: var(--border-radius);
+  border: 1pt solid var(--deep-purple);
+  background-color: var(--deep-purple-lighter);
+}
+
+/* =============================================================================
+ * Route: about, cv, projects
+ * =============================================================================
+ *
+ * Hierarchy is main > section > article > [contents].
+ * h1 titles are reserved to section level.
+ */
+
+.main {
+  margin: 50px 0;
+  padding: var(--padding);
+  max-width: var(--main-max-width);
+  font-size: 1rem; /* Scaling relative to document level */
+}
+.section {
+  margin-top: 50px;
+}
+.section:first-child {
+  /* Remove margin from first element; handled by .main */
+  margin-top: 0;
+}
+.section:last-child {
+  margin-bottom: 0;
+}
+.section,
+.section a {
+  /* Enforce text parameters */
+  color: var(--gray-light);
+  font-size: 1em; /* Scaling relative to main container */
+  line-height: 1.5;
+}
+.section p {
+  text-align: justify;
+}
+.section > h1 {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-top: 0;
+  color: var(--deep-purple);
+  font-family: 'Ubuntu', sans-serif;
+  border-top: 1pt solid var(--deep-purple);
+}
+.section > .article {
+  margin: 0px;
+  padding: 0 0 0 15px; /* Small left padding */
+}
+/* Always color subtitles in articles */
+.article h2 {
+  color: var(--peach);
+  font-family: 'Ubuntu', sans-serif;
+}
+.article h3 h4 h5 h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+
+/* =============================================================================
+ * Route: cv
+ * =============================================================================
+ */
+
+.cv-head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+.cv-head > img {
+  margin-left: auto;
+  height: auto;
+  max-width: 275px;
+  border-radius: 50%;
+}
+.cv-head-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.cv-head-info > h1,
+.cv-head-info > h2 {
+  margin: 0;
+  color: var(--peach);
+  font-family: var(--font-family-title);
+  text-align: center;
+}
+.cv-head-info > .social-info > .btn {
+  font-size: 1.75em;
+}
+.cv-row {
+  /* Useful row-like container */
+  margin: 16px auto; /* Match margins of p */
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  column-gap: 20px;
+}
+.cv-row > .left > .title,
+.cv-row > .right {
+  color: var(--peach);
+}
+.cv-row .fas {
+  /* Adjust spaces between text and FA icon in .cv-row containers */
+  margin-right: 3px;
+}
+
+/* =============================================================================
+ * Route: projects
+ * =============================================================================
+ */
+
+.cards-year {
+  align-self: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 4em;
+}
+.card {
+  margin-bottom: 20px; /* Add space between cards */
+}
+
+/* =============================================================================
+ * Route: 404
+ * =============================================================================
+ */
+
+.err-main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--white);
+  font-size: 1rem;
+  text-align: center;
+  background-image: url(/images/bg-404.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.err-main {
+  padding: var(--padding);
+}
+.err-main > h1 {
+  margin: 0;
+  font-size: 3em;
+}
+.err-main > h2 {
+  font-size: 2em;
+}
+
+/* =============================================================================
+ * Component: header
+ * =============================================================================
+ */
+
+.head-outer {
+  color: var(--white);
+  font-size: 1rem; /* Scaling relative to document level */
+}
+.head {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 12px auto; /* Center container within grid-head */
+  padding: var(--padding);
+  max-width: var(--head-max-width);
+}
+.head-shot {
+  padding-right: 20px; /* Matches var(--padding); */
+  width: 32px;
+  height: 32px;
+}
+.head-title,
+.head-title-mobile {
+  display: inline;
+  margin: 0 auto 0 0;
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.head-title-mobile {
+  /* Hide mobile (short) title by default */
+  display: none;
+}
+.head-bg {
+  /* Added on all pages, except index */
+  background-color: var(--deep-purple);
+  transition: all 0.3s ease-out;
+}
+.head-nav { 
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.1em;
+}
+.head-nav > a {
+  margin: auto 5px;
+  padding: 6px 8px;
+  color: var(--white);
+  text-decoration: none;
+}
+.head-nav > a.active,
+.head-nav > a:hover,
+.head-nav > a:active {
+  /* Style all elements in menu when either active or hovered */
+  color: var(--deep-blue);
+  text-decoration: underline;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background-color: var(--sand);
+  transition: all 0.25s ease-out;
+}
+.head-nav > a.blog {
+  /* Remove right margins from last element in menu */
+  margin-right: 0;
+}
+
+/* =============================================================================
+ * Component: mobile navigation menu
+ * =============================================================================
+ */
+
+.mobile-menu {
+  position: fixed;
+  top: var(--head-height); /* For border to be perfectly aligned */
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 0; /* Pushed to 300px when opened, see main.js */
+  font-size: 1rem;
+  background-color: var(--deep-purple);
+  overflow-x: hidden; /* Hide contents when width is 0 */ 
+  transition: width 0.3s ease-out;
+}
+.mobile-menu,
+.mobile-menu a {
+  color: var(--white);
+}
+.mobile-nav > a {
+  display: block;
+  padding: 20px 0 20px 20px;
+  font-size: 1.25em;
+  text-decoration: none;
+  border-bottom: 1pt solid var(--white);
+}
+.mobile-nav > a:first-child {
+  /* Add a top border to first child for consistency */
+  border-top: 1pt solid var(--white);
+}
+.mobile-nav > a:hover,
+.mobile-nav > a:active {
+  color: var(--deep-blue);
+  text-decoration: underline;
+  background-color: var(--sand);
+  transition: all 0.25s ease-out;
+}
+.mobile-menu > footer {
+  margin-top: 50px;
+}
+.mobile-menu > footer * {
+  text-align: center;
+}
+#mobile-nav-btn {
+  display: none; /* Hide menu by default */
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  color: var(--white);
+  font-size: 1.9em;
+  cursor: pointer;
+  /* Remove default button style */
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+#mobile-nav-btn:hover,
+#mobile-nav-btn:active {
+  color: var(--deep-blue);
+  border-radius: var(--border-radius);
+  background-color: var(--sand);
+}
+
+/* =============================================================================
+ * Component: page navigation
+ * =============================================================================
+ */
+
+.page-nav {
+  display: inline-block; /* Make container as big as its contents */
+  position: sticky; /* Fixed position at top of cell */
+  top: 0; left: 0;
+  margin: 20px 20px 20px 20px; /* This acts as a pseudo-padding */
+  font-size: 1rem; /* Scaling relative to document level */
+  line-height: 2;
+}
+.page-nav.nolist {
+  /* Alter usual padding of pseudo-list */
+  padding: 10px;
+}
+.page-nav a {
+  color: var(--gray-lighter);
+  text-decoration: none;
+}
+.page-nav a:hover,
+.page-nav a:active {
+  color: var(--gray-lighter);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* =============================================================================
+ * Component: footer
+ * =============================================================================
+ */
+
+.foot-outer {
+  background-color: var(--deep-purple);
+}
+.foot-outer,
+.foot-outer a {
+  color: var(--white);
+}
+.foot {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: var(--padding);
+  max-width: var(--foot-max-width);
+  font-size: 0.90rem; /* Scaling relative to document level */
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+}
+
+/* =============================================================================
+ * UI element: blocks
+ * =============================================================================
+ */
+
+.block {
+  margin: auto;
+  padding: 5px;
+  width: 90%;
+  text-align: center;
+  border-radius: var(--border-radius);
+}
+.block-grid {
+  /* Class to use instead of .block if needed */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  padding: 5px;
+  width: 90%;
+  border-radius: var(--border-radius);
+}
+.block-grid > .block-icon {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 2em;
+}
+.block-grid > .block-text {
+  padding: 0 10px;
+  text-align: justify;
+  font-size: 1em;
+}
+.block.info,
+.block-grid.info {
+  /* Class to use with .block or .block-grid */
+  border: 1pt solid var(--deep-purple);
+  background-color: var(--deep-purple-lighter);
+}
+.block.alert,
+.block-grid.alert {
+  /* Class to use with .block or .block-grid */
+  --ui-red: #721c24; /* Borders and text */
+  --bg-red: #f8d7da; /* Background */
+  color: var(--ui-red);
+  background-color: var(--bg-red);
+  border: 1pt solid var(--ui-red);
+}
+
+/* =============================================================================
+ * UI element: cool-looking buttons
+ * =============================================================================
+ */
+
+.btn {
+  padding: 10px;
+  font-size: 1.75em;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+/* Keyword !important is used to force overwrite of cascaded rules.
+   Buttons must have precedence. */
+.btn:hover,
+.btn:active {
+  color: var(--gray-light) !important;
+  border: 1pt solid var(--yellow) !important;
+  background-color: var(--yellow) !important;
+}
+.btn.white {
+  /* Class to use with .btn */
+  color: var(--white);
+  border: 1pt solid var(--white);
+}
+.btn.deep-purple {
+  /* Class to use with .btn */
+  color: var(--deep-purple);
+  border: 1pt solid var(--deep-purple);
+}
+
+/* =============================================================================
+ * UI element: cards
+ * =============================================================================
+ */
+
+.card {
+  /* Card parameters */
+  --bg-col: var(--sand);      /* Background */
+  --ui-col: var(--deep-blue); /* Color of all elements */
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 600px;
+  /* Material design border style below */
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: 
+    0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px  0px rgb(0 0 0 / 14%), 
+    0px 1px 3px  0px rgb(0 0 0 / 12%);
+}
+.card > img.card-media {
+  display: block;
+  height: auto;
+  width: 100%;
+  /* Material design border style */
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.card > .card-text {
+  padding: var(--padding);
+  color: var(--ui-col);
+  background-color: var(--bg-col);
+}
+.card > .card-text a {
+  color: var(--ui-col);
+}
+.card > .card-text > header > h1,
+.card > .card-text > header > h2 {
+  margin: 15px auto;
+  color: var(--ui-col);
+  text-align: left;
+  font-family: var(--font-family-title);
+  letter-spacing: 1px;
+}
+.card > .card-text > main {
+  margin: 10px 0 20px 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+.card > .card-text > footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1pt solid var(--ui-col);
+}
+.card > .card-text > footer .fas {
+  /* Add space between text and icon in footer */
+  margin-right: 5px;
+}
+
+/* =============================================================================
+ * UI element: css switch
+ * =============================================================================
+ * 
+ * Adapted from prototypr.io.
+ * Source: https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68
+ */
+
+/* Container */
+.sw-outer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0; 
+}
+/* Labels */
+.sw-label {
+  margin: 0 10px;
+  font-size: 36px;
+}
+.sw-label-active {
+  color: var(--deep-purple);
+}
+/* Switch */
+.sw {
+  /* Position of slider */
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 34px;
+  background-color: var(--deep-blue);
+  /* Remove default styling */
+  outline: none;
+  -webkit-appearance: none;
+}
+.sw:hover,
+.sw:active {
+  cursor: pointer;
+  background-color: var(--deep-purple);
+}
+/* Slider */
+.sw:before {
+  /* Absolute position of slider (relative to switch-bg) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  /* Height must be equal to switch */
+  height: 30px;
+  /* Width must be half of switch */
+  width: 30px;
+  border-radius: 50%;
+  background-color: var(--white);
+  /* Smooth transition to unchecked state */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.sw:checked {
+  /* Smooth transition to checked state */
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0.9;
+  background-color: var(--deep-purple);
+}
+.sw:checked:before {
+  transform: translate(100%);
+}
+
+/* =============================================================================
+ * UI element: keywords and links
+ * =============================================================================
+ */
+
+.keyword {
+  padding: 2px;
+  color: var(--white);
+  border-radius: var(--border-radius);
+  background-color: var(--deep-purple);
+}
+a.keyword:hover,
+a.keyword:active {
+  /* Color keywords that are links */
+  color: var(--gray-dark);
+  background-color: var(--yellow);
+}
+a.link {
+  text-align: left !important;
+}
+a.link:hover,
+a.link:active {
+  /* This class is (almost) identical to .keyword, but 
+     intended for hover events only. */
+  color: var(--gray-dark) !important;
+  text-align: left !important;
+  border-radius: var(--border-radius);
+  background-color: var(--yellow); 
+}
+.social-info {
+  margin: 30px auto 0 auto;
+  text-align: center; /* Center text elements */
+}
+.social-info > .social-nets {
+  margin-top: 30px;
+  font-size: 2.5em;
+}
+.social-info > .social-nets > a {
+  margin: 0 4px;
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: none;
+}
+.social-info > .social-nets.deep-purple > a {
+  /* Class to use with .social-nets (.deep-purple) */
+  color: var(--deep-purple);
+}
+.social-info > .social-nets > a:hover,
+.social-info > .social-nets > a:active {
+  color: var(--yellow);
+}
+.social-info > .social-nets.hover-peach > a:hover,
+.social-info > .social-nets.hover-peach > a:active {
+  /* Class to use with .social-nets (.hover-peach) */
+  color: var(--peach);
+}
+
+/* =============================================================================
+ * Utility classes
+ * =============================================================================
+ */
+
+.justify {
+  text-align: justify;
+}
+.noflow {
+  overflow: hidden;
+}
+.nolist {
+  padding-left: 20px;
+  list-style: none;
+}
+.noshow {
+  display: none;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.table {
+  width: 90%;
+  border-collapse: collapse;
+}
+.table, tr,
+.table, td {
+  padding: 10px 10px;
+  text-align: left;
+  border: 1pt solid var(--deep-purple);
+  border-collapse: collapse;
+}
+
+/* =============================================================================
+ * Media queries
+ * =============================================================================
+ */
+
+@media only screen and (max-width: 1075px) {
+  /* Hide right table of contents on smaller screens */
+  .grid-toc-r {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .cv-head {
+    flex-flow: column nowrap;
+  }
+  .cv-head > img {
+    align-self: center;
+    margin: unset;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 940px) {
+  /* Hide header embedded nav menu */
+  .head-nav {
+    display: none;
+  }
+  /* Activate mobile menu button */
+  #mobile-nav-btn {
+    display: flex;
+  }
+  /* Adjust right padding of head.
+     Accounts for padding of 8px of #mobile-nav-btn (8px + 12px = std 20px). */
+  .head {
+    padding: 0 12px 0 20px;
+  }
+  /* Add padding to sides of index page to improve readability */
+  .index {
+    padding: var(--padding);
+  }
+}
+@media only screen and (max-width: 575px) {
+  /* Improve readability of cards
+     Change footer flex flow to column nowrap */
+  .card > .card-text > footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .card > .card-text > footer > div {
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  /* Display mobile head title (shorter). */
+  .head-title {
+    display: none;
+  }
+  .head-title-mobile {
+    display: inline;
+  }
+}
+@media only screen and (max-width: 375px) {
+  /* Reduce fonts */
+  :root {
+    --font-size-std: 14px;
+  }
+  /* Reduce nav mobile buttons */
+  #mobile-nav-btn {
+    font-size: 28px;
+  }
+  /* Make blocks as large as text */
+  .block {
+    width: 96%; /* Manually optimized value */
+  }
+  .table {
+    width: 100%;
+  }
+}

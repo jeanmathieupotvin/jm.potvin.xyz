@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+lib/
+
+# Minified files
+public/stylesheets/*.min.css
+public/javascripts/*.min.css
+
+# Public files
+public/files/
+!public/files/.gitkeep
+public/images/
+!public/images/.gitkeep

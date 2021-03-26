@@ -1,0 +1,512 @@
+<!-- Copyright (c) Jean-Mathieu Potvin (2021). All rights reserved. -->
+<!DOCTYPE html>
+<html>
+
+<%- include("components/head"); -%>
+
+<body class="grid">
+
+  <%- include("components/header"); -%>
+
+  <!-- Page navigation menu for big screens -->
+  <nav class="grid-toc-r">
+    <ol class="page-nav nolist">
+      <li><a href="#contact">Contact information</a></li>
+      <li><a href="#objectives">Career objectives</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Work experience</a></li>
+      <li><a href="#projects">Notable past projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#distinctions">Academic and professional distinctions</a></li>
+      <li><a href="#info">Miscelleneous information</a></li>
+      <li><a href="#get">Download</a></li>
+      <li><a href="/cv" target="_self"><i class="fas fa-arrow-up"></i>&nbsp; Go to top</a></li>
+    </ol>
+  </nav>
+
+  <!-- Main contents -->
+  <main class="grid-main main">
+
+    <!-- Contact information -->
+    <section id="contact" class="section">
+      <div class="cv-head">
+        <div class="cv-head-info">
+          <h1>Jean-Mathieu Potvin</h1>
+          <h2>Research professional, developer</h2>
+          <div class="social-info">
+            <a class="btn deep-purple" href="mailto:jm@potvin.xyz">jm@potvin.xyz</a>
+            <div class="social-nets deep-purple hover-peach">
+              <%- include("components/social"); -%>
+            </div>
+          </div>
+        </div>
+        <img src="/images/me-275x275.jpg" alt="JM Potvin's picture" width="275" height="275" />
+      </div>
+    </section>
+
+    <!-- Objectives -->
+    <section id="objectives" class="section">
+      <h1>Career objectives</h1>
+      <article class="article">
+        <p>
+          I strive to become the perfect hybrid between a developer and a
+          research professional. I want to have full control over what I do
+          and be able to deliver analytical solutions along with a modern and
+          robust implementation.
+        </p>
+        <p>
+          See <a class="link" href="/about" target="_self">About</a> for more
+          information on what I do.
+        </p>
+      </article>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <h1>Education</h1>
+      <article class="article">
+
+        <!-- Master -->
+        <div class="cv-row" data-desc="msc">
+          <div class="left">
+            <div class="title">Maîtrise en mathématiques, concentration mathématiques actuarielles et financières</div>
+            <i>Master's Degree, Mathematics, Actuarial and Financial Mathematics profile</i><br />
+            <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://uqam.ca/en/information/about/" target="_blank" rel="noopener">Université du Québec à Montréal</a>
+          </div>
+          <div class="right">2016 - 2020</div>
+        </div>
+
+        <!-- Bachelor -->
+        <div class="cv-row" data-desc="bsc">
+          <div class="left">
+            <div class="title">Baccalauréat en Actuariat</div>
+            <i>Bachelor's Degree, Actuarial Science</i><br />
+            <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://uqam.ca/en/information/about/" target="_blank" rel="noopener">Université du Québec à Montréal</a>
+          </div>
+          <div class="right">2012 - 2015</div>
+        </div>
+
+        <!-- College -->
+        <div class="cv-row" data-desc="dec">
+          <div class="left">
+            <div class="title">Diplôme d’études collégiales en Sciences de la nature, profil sciences pures et appliquées</div>
+            <i>Quebec Diploma of College Studies, Natural Sciences, Pure and Applied Sciences profile</i><br />
+            <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://www.cegep-lanaudiere.qc.ca/lassomption" target="_blank" rel="noopener">Cégep Régional de Lanaudière à L'Assomption</a>
+          </div>
+          <div class="right">2008 - 2011</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Work experience -->
+    <section id="work" class="section">
+      <h1>Work experience</h1>
+      <article class="article">
+
+        <!-- Co-op: R&AI I, II -->
+        <div data-desc="coop-r-and-ai-analyst">
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Research & Innovation Analyst II (previously Analyst level I)</div>
+              Catastrophic Hazards & Advanced Risk Modelling team (CHARM), Business Intelligence<br />
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://www.cooperators.ca/" target="_blank" rel="noopener">The Co-operators General Insurance Company</a>
+            </div>
+            <div class="right">2018 - 2021</div>
+          </div>
+          <p>
+            Team CHARM is dedicated to meteorological perils, extreme events, 
+            natural catastrophes and climate change. I focus on the following 
+            themes.
+            <ul>
+              <li>Create and implement stochastic models for flood losses.</li>
+              <li>Develop and implement robust tools for spatial data.</li>
+              <li>Develop and implement web applications and web services.</li>
+              <li>Develop internal <i class="fab fa-r-project"></i> packages.</li>
+              <li>Perform complex data analyses (most of the time, this data has a spatial component).</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- UQAM: lecturer -->
+        <div data-desc="uqam-lecturer">
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Lecturer, Actuaries & computer science</div>
+              <i>Chargé de cours, Actuariat et informatique (ACT-4320)</i><br />
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://uqam.ca/en/information/about/" target="_blank" rel="noopener">Université du Québec à Montréal</a>
+            </div>
+            <div class="right">2018</div>
+          </div>
+          <p>
+            Teach the basics of computer science with a focus on actuarial applications.
+            <ul>
+              <li>Efficient usage of the Microsoft Excel software in the actuarial business.</li>
+              <li>Basics of programming languages with applications in VBA (Visual Basic for Applications).</li>
+              <li>Numerical methods: integration, derivation, simulation, sorting and root-finding algorithms.</li>
+            </ul>
+          </p>
+        </div>
+        
+        <!-- Ouranos: intern -->
+        <div data-desc="ouranos-intern">
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Research intern</div>
+              <i>Stagiaire en recherche</i><br />
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://www.ouranos.ca/en/" target="_blank" rel="noopener">Ouranos, Consortium on Regional Climatology and Adaptation to Climate Change</a>
+            </div>
+            <div class="right">2016 - 2017</div>
+          </div>
+          <p>
+            Develop a pricing and segmentation methodology for flood risk based
+            on multiple sciences and deliver a proof of concept for on a small
+            Quebec region. This was joint work with Direction de l'Expertise
+            Hydrique of Ministry of Sustainable Development, Environment, and
+            Fight Against Climate Change (in french, MDDELCC) and Quantact. It
+            led to my master's thesis and a published scientific paper.
+          </p>
+          <p>
+            See <a class="link" href="/projects#floodrisk">this project's description</a> for
+            more information.
+          </p>
+        </div>
+
+        <!-- UQAM: assistant -->
+        <div data-desc="uqam-assistant">
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Teaching assistant</div>
+              <i>Auxiliaire d'enseignement</i><br />
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://uqam.ca/en/information/about/" target="_blank" rel="noopener"> Département de mathématiques, Université du Québec à Montréal</a>
+            </div>
+            <div class="right">2015 - 2017</div>
+          </div>
+          <p>
+            Fourteen teaching assistant positions in three years for various
+            undergraduate actuarial courses. These roles implied solving all
+            exercises and reviewing them in class with the students through
+            lectures.
+            <ul>
+              <li>Credibility (<i>Crédibilité</i>, ACT3040).</li>
+              <li>Actuaries & computer science (<i>Actuariat et informatique</i>, ACT4320).</li>
+              <li>Actuarial science II (<i>Actuariat II</i>, ACT3122).</li>
+              <li>P&C insurance: pricing & reserving (<i>Assurance IARD: Tarification et Évaluation</i>, ACT2040).</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Quantact: intern -->
+        <div data-desc="quantact-intern">
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Research intern</div>
+              <i>Stagiaire en recherche</i><br />
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="http://quantact.uqam.ca/index_en.php" target="_blank" rel="noopener">Quantact, Actuarial and Financial Mathematics Laboratory</a>
+            </div>
+            <div class="right">2015</div>
+          </div>
+          <p>
+            My first steps as a research professional. I learned how to perform
+            proper literature reviews, how to manage my time in complex scientific
+            projects and how to better communicate assumptions, models and results.
+            I was also introduced to various hydroclimatic and meteorological
+            concepts.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Notable past projects -->
+    <section id="projects" class="section">
+      <h1>Notable past projects</h1>
+      <article class="article">
+        <p>
+          Projects are described in <a class="link" href="/projects">Projects</a>.
+          Click on any link below for more information on a particular one.
+        </p>
+        <p>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#blueprint">Blueprint</a></div>
+            <div class="right">2021</div>
+          </div>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#potvin">potvin.xyz</a></div>
+            <div class="right">2021</div>
+          </div>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#ra">Risk Accumulation</a></div>
+            <div class="right">2021</div>
+          </div>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#fs">Flood Simulators</a></div>
+            <div class="right">2020</div>
+          </div>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#qch">Quebec's hydrometry</a></div>
+            <div class="right">2019</div>
+          </div>
+          <div class="cv-row">
+            <div class="left"><a class="link" href="/projects#floodrisk">Pricing river flood risk</a></div>
+            <div class="right">2018</div>
+          </div>
+        </p>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <h1>Skills</h1>
+      <article class="article grid-2c-flex">
+        
+        <!-- Languages -->
+        <div data-desc="langs">
+          <h2><i class="fas fa-code"></i> Programming languages</h2>
+          <p>
+            <ul>
+              <li>R</li>
+              <li>HTML, CSS (modern CSS3 and HTML5)</li>
+              <li>JavaScript (modern EcmaScript 6+, NodeJS)</li>
+              <li>C (I am <strong>not</strong> an expert)</li>
+              <li>VBA, SAS, SQL (languages I don't use anymore)</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Future languages -->
+        <div data-desc="future-langs">
+          <h2><i class="fas fa-code"></i> Future programming languages</h2>
+          <p>
+            <ul>
+              <li>TypeScript (modern JavaScript on steroids)</li>
+              <li>Rust (one of the most promising compiled language)</li>
+              <li>C (I feel <i>rusty</i> about it)</li>
+            </ul>
+          </p>
+          <p style="margin: auto; width: 70%;">
+            All these languages are tied to <mark class="keyword">WebAssembly</mark>.
+            I would like to master this language before 2025, as I believe it
+            will become a foundation block of the future web.
+          </p>
+        </div>
+        
+        <!-- Applied mathematics -->
+        <div data-desc="maths">
+          <h2><i class="fas fa-infinity"></i> Applied mathematics</h2>
+          <p>
+            <ul>
+              <li>Statistical learning (mostly supervised methods)</li>
+              <li>Extreme Value Theory</li>
+              <li>Time series, seasonality & trends</li>
+              <li>Dependence models, copulas & multivariate models</li>
+              <li>Applied mathematics in non-life insurance</li>
+              <li>Spatial modelling (models that have a spatial component)</li>
+            </ul>
+          </p>
+        </div>
+        
+        <!-- Geomatics -->
+        <div data-desc="geo">
+          <h2><i class="fas fa-compass"></i> Geomatics</h2>
+          <p>
+            <ul>
+              <li>OSGeo4W related tools: QGIS, SAGA, GDAL, PROJ, etc.</li>
+              <li>R packages <em>sp</em>, <em>raster</em>, <em>rgdal</em>, <em>rgeos</em>, etc.</li>
+              <li>Spatial data: formats, projections, CRS, etc.</li>
+            </ul>
+          </p>
+        </div>
+        
+        <!-- Tools I use -->
+        <div data-desc="tools">
+          <h2><i class="fas fa-wrench"></i> Various useful tools</h2>
+          <p>
+            <ul>
+              <li><strong>OS :</strong> Windows 10 Pro / Home (professional, personal), Ubuntu (personal), Xubuntu (personal)</li>
+              <li><strong>Bundling :</strong> RStudio Connect, Docker</li>
+              <li><strong>CI/CD :</strong> Github Actions</li>
+              <li><strong>IDE :</strong> RStudio, Visual Studio Code, Texmaker</li>
+              <li><strong>Git :</strong> Github (personal), Bitbucket (professional)</li>
+              <li><strong>Typesetting :</strong> LaTeX, Markdown, RMarkdown, HTML</li>
+              <li><strong>Productivity :</strong> Microsoft Office, draw.io, Jira</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Professional -->
+        <div data-desc="soft-skills">
+          <h2><i class="fas fa-handshake"></i> Soft skills</h2>
+          <p>
+            <ul>
+              <li>Object-oriented, functional & procedural programming paradigms</li>
+              <li>Strategic planning of complex modelling projects</li>
+              <li>Efficient communication to technical and non-technical audiences</li>
+              <li>Efficient liaison between multiple expertises</li>
+            </ul>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Academic and professional distinctions -->
+    <section id="distinctions" class="section">
+      <h1>Academic and professional distinctions</h1>
+      <article class="article">
+        
+        <!-- Papers -->
+        <div data-desc="papers">
+          <h2><i class="fas fa-book-open"></i> Papers</h2>
+          <div class="cv-row">
+            <div class="left">
+              <a class="link" href="https://www.tandfonline.com/doi/abs/10.1080/10920277.2019.1667830" target="_blank" rel="noopener">
+              Pricing Flood Insurance with a Hierarchical Physics-Based Model</a>
+            </div>
+            <div class="right">2020</div>
+          </div>
+          <div class="cv-row">
+            <div class="left">
+              <a class="link" href="/files/thesis/potvin-master-thesis.pdf" target="_blank" rel="noopener">
+              <i>Tarification du risque d'inondation selon une approche hiérarchique basée sur la physique</i></a>
+            </div>
+            <div class="right">2019</div>
+          </div>
+        </div>
+
+        <!-- Scholarships -->
+        <div data-desc="scholarships">
+          <h2><i class="fas fa-award"></i> Scholarships</h2>
+          <div class="cv-row">
+            <div class="left">
+              MITACS Accelerate scholarship, in partnership with
+              <a class="link" href="https://www.ouranos.ca/en/" target="_blank" rel="noopener">Ouranos</a>
+            </div>
+            <div class="right">2016, 2017</div>
+          </div>
+        </div>
+
+        <!-- Presentations -->
+        <div data-desc="presentations">
+          <h2><i class="fas fa-comment"></i> Presentations</h2>
+          <div class="cv-row">
+            <div class="left">
+              <a class="link" href="/files/presentations/potvin-2018-ssc-annual-meeting-montreal.pdf" target="_blank" rel="noopener">
+                Pricing flood insurance with a hierarchical physics-based model</a><br />
+              <i class="fas fa-map-marker-alt"></i> Statistical Society of Canada 2018 Annual Meeting
+            </div>
+            <div class="right">2018</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="left">
+              <a class="link" href="/files/presentations/potvin-2017-7e-symposium-ouranos.pdf" target="_blank" rel="noopener">
+                <i>La tarification du risque d’inondation avec un modèle hiérarchique</i></a><br />
+              <i class="fas fa-map-marker-alt"></i> 7e Symposium Ouranos
+            </div>
+            <div class="right">2017</div>
+          </div>
+
+          <div class="cv-row">
+            <div class="left">
+              <a class="link" href="/files/presentations/potvin-2016-ouranos.pdf" target="_blank" rel="noopener">
+                <i>Modélisation actuarielle du risque d’inondation: contexte, problématique et premiers pas</i></a><br />
+                <i class="fas fa-map-marker-alt"></i> Ouranos
+            </div>
+            <div class="right">2016</div>
+          </div>
+        </div>
+
+        <!-- Actuarial exams -->
+        <div data-desc="exams">
+          <h2><i class="fas fa-graduation-cap"></i> Actuarial exams</h2>
+          <div class="block-grid alert">
+            <div class="block-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="block-text">
+              I stopped writing actuarial exams in 2016, when I decided to focus
+              on a hybrid research profesional and developer profile.
+            </div>
+          </div>
+          <div class="cv-row">
+            <div class="left">Exams P/1 and C/4 of the Casualty Actuarial Society (CAS)</div>
+            <div class="right">2014, 2016</div>
+          </div>
+          <div class="cv-row">
+            <div class="left">Validation by Educational Experience (VEE) of the Society of Actuaries (SOA)</div>
+            <div class="right">2016</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Information -->
+    <section id="info" class="section">
+      <h1>Miscelleneous information</h1>
+      <article class="article">
+
+        <!-- Languages -->
+        <div data-desc="spoken-langs">
+          <h2><i class="fas fa-comments"></i> Languages</h2>
+          <p>
+            <ul>
+              <li>French (native)</li>
+              <li>English (professional)</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Interests -->
+        <div data-desc="interests">
+          <h2><i class="fas fa-heart"></i> Interests</h2>
+          <p>
+            <ul>
+              <li>Running (I am a marathonian, #brag)</li>
+              <li>Cycling</li>
+              <li>Alpine skiing</li>
+              <li>Hiking, camping, <i>great outdoors</i></li>
+              <li>Badminton, tennis, ping-pong</li>
+              <li>Magic: The Gathering card game</li>
+              <li>Reading</li>
+              <li>Anime, mangas, light novels</li>
+              <li>Computer science, science</li>
+              <li>Gaming (huge Nintendo Switch and Blizzard Entertainment fan)</li>
+            </ul>
+          </p>
+        </div>
+
+        <!-- Volunteer work -->
+        <div data-desc="volunteering">
+          <h2><i class="fas fa-user-friends"></i> Volunteer work</h2>
+          <div class="cv-row">
+            <div class="left">
+              <div class="title">Co-organizer</div>
+              <i class="fas fa-map-marker-alt"></i> <a class="link" href="https://www.actulab.ca/" target="_blank" rel="noopener">
+                <i>Plateforme d'innovation Actulab</i></a>
+            </div>
+            <div class="right">2015 - 2017</div>
+          </div>
+          <p>
+            Member of the steering committee and co-organizer of the 2015,
+            2016 and 2017 (winter and fall) Montreal events.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Download -->
+    <section id="get" class="section">
+      <h1>Download</h1>
+      <article class="article">
+        <p>
+          This CV is available for download in a PDF format in
+          <a class="link" href="files/cv/cv-potvin-jean-mathieu-en.pdf" target="_blank">English</a> and 
+          <a class="link" href="files/cv/cv-potvin-jean-mathieu-fr.pdf" target="_blank">French</a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <%- include("components/footer"); -%>
+
+</body>
+
+</html>

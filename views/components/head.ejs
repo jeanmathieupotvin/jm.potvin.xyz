@@ -1,0 +1,53 @@
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8" />
+  <base href="" target="_self">
+
+  <!-- Meta information -->
+  <meta name="route" content="<%= route %>" />
+  <meta name="author" content="Jean-Mathieu Potvin" />
+  <meta name="description" content="The personal website of Jean-Mathieu Potvin" />
+  <meta name="keywords" content="developer, research, professional, jmp, jean, mathieu, potvin" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6f40ff" />
+  <meta name="msapplication-TileColor" content="#6f40ff" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="potvin.xyz" />
+  <meta itemprop="description" content="The personal website of Jean-Mathieu Potvin" />
+  <meta itemprop="image" content="https://jm.potvin.xyz/images/me.png" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="<%= ogtitle %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= ogurl %>" />
+  <meta property="og:image" content="https://jm.potvin.xyz/images/me.png" />
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Jean-Mathieu profile picture" />
+  <meta property="og:image:width" content="670" />
+  <meta property="og:image:height" content="669" />
+  <meta property="og:description" content="The personal website of Jean-Mathieu Potvin" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="potvin.xyz" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= ogtitle %>" />
+  <meta name="twitter:description" content="The personal website of Jean-Mathieu Potvin" />
+  <meta name="twitter:image" content="https://jm.potvin.xyz/images/me.png" />
+
+  <!-- Stylesheets -->
+  <% links.forEach(e => { %><link <%- e %> />
+  <% }); %>
+  <!-- Scripts -->
+  <% scripts.forEach(e => { %><script <%- e %>></script>
+  <% }); %>
+  <!-- Other assets -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+</head>
