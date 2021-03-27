@@ -2,7 +2,7 @@
   "index": {
     "route": "home",
     "title": "JM Potvin | Home",
-    "ogtitle": "jm.potvin.xyz | home page",
+    "ogtitle": "Jean-Mathieu Potvin | Home",
     "ogurl": "https://jm.potvin.xyz",
     "scripts": [
       { "src": "/javascripts/main.js", "defer": "defer" },
@@ -19,7 +19,7 @@
   "about": {
     "route": "about",
     "title": "JM Potvin | About me",
-    "ogtitle": "jm.potvin.xyz | About me",
+    "ogtitle": "Jean-Mathieu Potvin | About me",
     "ogurl": "https://jm.potvin.xyz/about",
     "scripts": [
       { "src": "/javascripts/main.js", "defer": "defer" },
@@ -35,7 +35,7 @@
   "cv": {
     "route": "cv",
     "title": "JM Potvin | CV",
-    "ogtitle": "jm.potvin.xyz | CV",
+    "ogtitle": "Jean-Mathieu Potvin | CV",
     "ogurl": "https://jm.potvin.xyz/cv",
     "scripts": [
       { "src": "/javascripts/main.js", "defer": "defer" },
@@ -51,7 +51,7 @@
   "projects": {
     "route": "projects",
     "title": "JM Potvin | Projects",
-    "ogtitle": "jm.potvin.xyz | Projects",
+    "ogtitle": "Jean-Mathieu Potvin | Projects",
     "ogurl": "https://jm.potvin.xyz/projects",
     "scripts": [
       { "src": "/javascripts/main.js", "defer": "defer" },
@@ -67,7 +67,7 @@
   "blog": {
     "route": "blog",
     "title": "JM Potvin | Blog",
-    "ogtitle": "jm.potvin.xyz | Blog",
+    "ogtitle": "Jean-Mathieu Potvin | Blog",
     "ogurl": "https://jm.potvin.xyz/blog",
     "scripts": [],
     "links": [
