@@ -8,14 +8,14 @@
   --white: #fcfcfc;
   --sand: #fefedf;
   --yellow: #f9f871;
-  --peach: #ff9671;
-  --deep-purple-lighter: rgba(111, 64, 255, 0.25);
   --deep-purple: #6f40ff;
+  --deep-purple-lighter: rgba(111, 64, 255, 0.25);
+  --dolphin: #47455c; 
   --deep-blue: #18025B;
   --gray-lighter: #70878D;
   --gray-light: #404040;
-  --gray-dark-light: rgba(54, 54, 54, 0.75);
   --gray-dark: #363636;
+  --gray-dark-light: rgba(54, 54, 54, 0.75);
   /* Fonts, text */
   --font-size-std: 16px;
   --font-family: 'Lato', sans-serif;
@@ -138,7 +138,7 @@ html {
   text-justify: inter-word;
   line-height: 1.5;
   border-radius: var(--border-radius);
-  border: 1pt solid var(--deep-purple);
+  border: 1pt solid var(--dolphin);
   background-color: var(--deep-purple-lighter);
 }
 
@@ -180,17 +180,13 @@ html {
   margin: 0;
   padding-bottom: 5px;
   padding-top: 0;
-  color: var(--deep-purple);
+  color: var(--dolphin);
   font-family: 'Ubuntu', sans-serif;
-  border-top: 1pt solid var(--deep-purple);
-}
-.section > .article {
-  margin: 0px;
-  padding: 0 0 0 15px; /* Small left padding */
+  border-top: 1pt solid var(--dolphin);
 }
 /* Always color subtitles in articles */
 .article h2 {
-  color: var(--peach);
+  color: var(--deep-purple);
   font-family: 'Ubuntu', sans-serif;
 }
 .article h3 h4 h5 h6 {
@@ -226,7 +222,7 @@ html {
 .cv-head-info > h1,
 .cv-head-info > h2 {
   margin: 0;
-  color: var(--peach);
+  color: var(--deep-purple);
   font-family: var(--font-family-title);
   text-align: center;
 }
@@ -242,7 +238,7 @@ html {
 }
 .cv-row > .left > .title,
 .cv-row > .right {
-  color: var(--peach);
+  color: var(--deep-purple);
 }
 .cv-row .fas {
   /* Adjust spaces between text and FA icon in .cv-row containers */
@@ -330,7 +326,7 @@ html {
 }
 .head-bg {
   /* Added on all pages, except index */
-  background-color: var(--deep-purple);
+  background-color: var(--dolphin);
   transition: all 0.3s ease-out;
 }
 .head-nav { 
@@ -373,7 +369,7 @@ html {
   height: 100%;
   width: 0; /* Pushed to 300px when opened, see main.js */
   font-size: 1rem;
-  background-color: var(--deep-purple);
+  background-color: var(--dolphin);
   overflow-x: hidden; /* Hide contents when width is 0 */ 
   transition: width 0.3s ease-out;
 }
@@ -459,7 +455,7 @@ html {
  */
 
 .foot-outer {
-  background-color: var(--deep-purple);
+  background-color: var(--dolphin);
 }
 .foot-outer,
 .foot-outer a {
@@ -514,7 +510,7 @@ html {
 .block.info,
 .block-grid.info {
   /* Class to use with .block or .block-grid */
-  border: 1pt solid var(--deep-purple);
+  border: 1pt solid var(--dolphin);
   background-color: var(--deep-purple-lighter);
 }
 .block.alert,
@@ -660,7 +656,7 @@ html {
 .sw:hover,
 .sw:active {
   cursor: pointer;
-  background-color: var(--deep-purple);
+  background-color: var(--deep-purple-lighter);
 }
 /* Slider */
 .sw:before {
@@ -699,7 +695,7 @@ html {
   padding: 2px;
   color: var(--white);
   border-radius: var(--border-radius);
-  background-color: var(--deep-purple);
+  background-color: var(--dolphin);
 }
 a.keyword:hover,
 a.keyword:active {
@@ -741,10 +737,10 @@ a.link:active {
 .social-info > .social-nets > a:active {
   color: var(--yellow);
 }
-.social-info > .social-nets.hover-peach > a:hover,
-.social-info > .social-nets.hover-peach > a:active {
-  /* Class to use with .social-nets (.hover-peach) */
-  color: var(--peach);
+.social-info > .social-nets.hover-dolphin > a:hover,
+.social-info > .social-nets.hover-dolphin > a:active {
+  /* Class to use with .social-nets (.hover-dolphin) */
+  color: var(--dolphin);
 }
 
 /* =============================================================================
@@ -776,7 +772,7 @@ a.link:active {
 .table, td {
   padding: 10px 10px;
   text-align: left;
-  border: 1pt solid var(--deep-purple);
+  border: 1pt solid var(--dolphin);
   border-collapse: collapse;
 }
 
