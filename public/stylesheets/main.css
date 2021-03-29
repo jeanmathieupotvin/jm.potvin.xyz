@@ -17,16 +17,15 @@
   --gray-dark: #363636;
   --gray-dark-light: rgba(54, 54, 54, 0.75);
   /* Fonts, text */
-  --font-size-std: 16px;
-  --font-family: 'Lato', sans-serif;
-  --font-family-title: 'Ubuntu', sans-serif;
+  --font-size-std: 15px;
+  --font-family: 'Open Sans', sans-serif;
   /* Borders */
   --border-radius: 3px;
   /* Dimensions */
-  --head-height: 60px;
-  --head-max-width: 1175px;
-  --main-max-width: 900px;
-  --foot-max-width: 900px;
+  --head-height: 50px;
+  --head-max-width: 1000px;
+  --main-max-width: 800px;
+  --foot-max-width: 800px;
   /* Padding, margins */
   --padding: 0 20px;
 }
@@ -126,8 +125,7 @@ html {
 }
 .index-jm-motto {
   margin: 30px 0;
-  font-size: 2em;
-  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.75em;
   text-align: center; /* Needed if text wraps */
 }
 .index-jm-desc {
@@ -151,20 +149,9 @@ html {
  */
 
 .main {
-  margin: 50px 0;
+  margin: 0 0 20px 0;
   padding: var(--padding);
-  max-width: var(--main-max-width);
   font-size: 1rem; /* Scaling relative to document level */
-}
-.section {
-  margin-top: 50px;
-}
-.section:first-child {
-  /* Remove margin from first element; handled by .main */
-  margin-top: 0;
-}
-.section:last-child {
-  margin-bottom: 0;
 }
 .section,
 .section a {
@@ -177,21 +164,10 @@ html {
   text-align: justify;
 }
 .section > h1 {
-  margin: 0;
-  padding-bottom: 5px;
-  padding-top: 0;
-  color: var(--dolphin);
-  font-family: 'Ubuntu', sans-serif;
-  border-top: 1pt solid var(--dolphin);
+  border-bottom: 1pt solid var(--gray-light);
 }
-/* Always color subtitles in articles */
-.article h2 {
-  color: var(--deep-purple);
-  font-family: 'Ubuntu', sans-serif;
-}
-.article h3 h4 h5 h6 {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
+.article > :is(h3, h4, h5, h6) {
+  font-weight: normal;
 }
 
 /* =============================================================================
@@ -204,13 +180,13 @@ html {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  margin: auto;
-  width: 90%;
+  margin: 20px auto;
+  width: 95%;
 }
 .cv-head > img {
   margin-left: auto;
   height: auto;
-  max-width: 275px;
+  max-width: 250px;
   border-radius: 50%;
 }
 .cv-head-info {
@@ -222,12 +198,10 @@ html {
 .cv-head-info > h1,
 .cv-head-info > h2 {
   margin: 0;
-  color: var(--deep-purple);
-  font-family: var(--font-family-title);
   text-align: center;
 }
 .cv-head-info > .social-info > .btn {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 .cv-row {
   /* Useful row-like container */
@@ -303,20 +277,16 @@ html {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 12px auto; /* Center container within grid-head */
+  justify-content: center;
+  margin: auto;
   padding: var(--padding);
+  height: var(--head-height);
   max-width: var(--head-max-width);
-}
-.head-shot {
-  padding-right: 20px; /* Matches var(--padding); */
-  width: 32px;
-  height: 32px;
 }
 .head-title,
 .head-title-mobile {
-  display: inline;
-  margin: 0 auto 0 0;
-  font-family: var(--font-family-title);
+  margin-right: auto;
+  font-size: 2em;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -327,7 +297,6 @@ html {
 .head-bg {
   /* Added on all pages, except index */
   background-color: var(--dolphin);
-  transition: all 0.3s ease-out;
 }
 .head-nav { 
   display: flex;
@@ -336,7 +305,7 @@ html {
 }
 .head-nav > a {
   margin: auto 5px;
-  padding: 6px 8px;
+  padding: 4px 6px;
   color: var(--white);
   text-decoration: none;
 }
@@ -553,6 +522,13 @@ html {
   color: var(--deep-purple);
   border: 1pt solid var(--deep-purple);
 }
+.btn.hover-dolphin:hover,
+.btn.hover-dolphin:active {
+  /* Class to use with .btn */
+  color: var(--white) !important;
+  border: 1pt solid var(--dolphin) !important;
+  background-color: var(--dolphin) !important;
+}
 
 /* =============================================================================
  * UI element: cards
@@ -595,7 +571,6 @@ html {
   margin: 15px auto;
   color: var(--ui-col);
   text-align: left;
-  font-family: var(--font-family-title);
   letter-spacing: 1px;
 }
 .card > .card-text > main {
@@ -604,17 +579,7 @@ html {
   line-height: 1.5;
 }
 .card > .card-text > footer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px;
   border-top: 1pt solid var(--ui-col);
-}
-.card > .card-text > footer .fas {
-  /* Add space between text and icon in footer */
-  margin-right: 5px;
 }
 
 /* =============================================================================
@@ -692,7 +657,7 @@ html {
  */
 
 .keyword {
-  padding: 2px;
+  padding: 1px 2px;
   color: var(--white);
   border-radius: var(--border-radius);
   background-color: var(--dolphin);
@@ -787,17 +752,7 @@ a.link:active {
     display: none;
   }
 }
-@media only screen and (max-width: 800px) {
-  .cv-head {
-    flex-flow: column nowrap;
-  }
-  .cv-head > img {
-    align-self: center;
-    margin: unset;
-    margin-top: 20px;
-  }
-}
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 850px) {
   /* Hide header embedded nav menu */
   .head-nav {
     display: none;
@@ -816,17 +771,14 @@ a.link:active {
     padding: var(--padding);
   }
 }
-@media only screen and (max-width: 575px) {
-  /* Improve readability of cards
-     Change footer flex flow to column nowrap */
-  .card > .card-text > footer {
-    display: flex;
+@media only screen and (max-width: 800px) {
+  .cv-head {
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
   }
-  .card > .card-text > footer > div {
-    padding: 5px;
+  .cv-head > img {
+    align-self: center;
+    margin: unset;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 490px) {
@@ -835,17 +787,13 @@ a.link:active {
     display: none;
   }
   .head-title-mobile {
-    display: inline;
+    display: unset;
   }
 }
 @media only screen and (max-width: 375px) {
   /* Reduce fonts */
   :root {
     --font-size-std: 14px;
-  }
-  /* Reduce nav mobile buttons */
-  #mobile-nav-btn {
-    font-size: 28px;
   }
   /* Make blocks as large as text */
   .block {
