@@ -53,14 +53,12 @@ Main.prototype.toggleMobileMenu = () => {
     document.documentElement.classList.toggle("noflow");
 }
 
-// Add bg to header bar and show headshot in it when route is not index.
+// Add bg to header bar when route is not index.
 Main.prototype.updateHeader = () => {
     const route = document.querySelector("meta[name='route']").content;
     if (route !== "home") {
         // Add background to header.
         document.getElementsByTagName("header")[0].classList.add("head-bg");
-        // Show headshot.
-        document.getElementsByClassName("head-shot")[0].classList.remove("noshow");
     }
 }
 
