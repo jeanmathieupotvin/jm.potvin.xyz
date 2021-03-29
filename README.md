@@ -1,6 +1,6 @@
 # jm.potvin.xyz
 
-![](https://img.shields.io/badge/version-1.0.4-brightgreen?style=for-the-badge)
+![](https://img.shields.io/badge/version-1.1.0-brightgreen?style=for-the-badge)
 
 My personal website and blog. A small showcase of my web design and web development skills.
 
