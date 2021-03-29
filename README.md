@@ -1,6 +1,6 @@
 # jm.potvin.xyz
 
-![](https://img.shields.io/badge/version-1.0.4-brightgreen?style=for-the-badge)
+![](https://img.shields.io/badge/version-1.1.0-brightgreen?style=for-the-badge)
 
 My personal website and blog. A small showcase of my web design and web development skills.
 
@@ -54,13 +54,13 @@ npm run [SCRIPT-NAME]
 
 # Metadata management
 
-Routes leverage metadata that is stored in `./routes-metadata.json`. Each route in `./routes` gets a named entry in the metadata. The latter is an object having a structure illustrated by the example below.
+Routes leverage metadata stored in `./package.json`. Each route in `./routes` gets a named entry in the `appRoutes` property of this file. The latter is an object having a structure illustrated by the example below.
 
 ```js
 {
     "route": "home",
     "title": "JM Potvin | Home",
-    "ogtitle": "jm.potvin.xyz | home page",
+    "ogtitle": "Jean-Mathieu Potvin | Home",
     "ogurl": "https://jm.potvin.xyz",
     "scripts": [
       { "src": "/javascripts/main.js", "defer": "defer" },
@@ -69,7 +69,7 @@ Routes leverage metadata that is stored in `./routes-metadata.json`. Each route 
     ],
     "links": [
       { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-      { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/" },
+      { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/[...]" },
       { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
       { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
     ]

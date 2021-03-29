@@ -4,9 +4,10 @@
  * =============================================================================
  */
 
-// Extract route metadata.
-const meta   = require('../routes-metadata').projects;
-meta.version = require('../package').version;
+// Extract route's metadata.
+const { version, appRoutes } = require('../package');
+const meta   = appRoutes.projects;
+meta.version = version;
 
 // Dependencies.
 const express        = require('express');
