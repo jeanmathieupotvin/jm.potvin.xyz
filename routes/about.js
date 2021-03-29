@@ -4,14 +4,15 @@
  * =============================================================================
  */
 
-// Extract route metadata.
-const meta   = require('../routes-metadata').about;
-meta.version = require('../package').version;
+// Extract route's metadata.
+const { version, appRoutes } = require('../package');
+const meta   = appRoutes.about;
+meta.version = version;
 
 // Dependencies.
 const express        = require('express');
 const router         = express.Router();
-const htmlAttrString = require("../lib/htmlattrstring");
+const htmlAttrString = require('../lib/htmlattrstring');
 
 // Construct proper attributes strings from objects and store them.
 meta.links   = meta.links.map(e => htmlAttrString.toString(e));
