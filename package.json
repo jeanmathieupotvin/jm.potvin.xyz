@@ -1,6 +1,6 @@
 {
   "name": "jm.potvin.xyz",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "The personal website of Jean-Mathieu Potvin",
   "author": "Jean-Mathieu Potvin",
   "license": "All Rights Reserved",
@@ -40,5 +40,98 @@
     "cssnano": "^4.1.10",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1"
+  },
+  "appRoutes": {
+    "index": {
+      "route": "home",
+      "title": "JM Potvin | Home",
+      "ogtitle": "Jean-Mathieu Potvin | Home",
+      "ogurl": "https://jm.potvin.xyz",
+      "scripts": [
+        { "src": "/javascripts/main.js", "defer": "defer" },
+        { "src": "/javascripts/index.js", "defer": "defer" },
+        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+      ],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    },
+    "about": {
+      "route": "about",
+      "title": "JM Potvin | About me",
+      "ogtitle": "Jean-Mathieu Potvin | About me",
+      "ogurl": "https://jm.potvin.xyz/about",
+      "scripts": [
+        { "src": "/javascripts/main.js", "defer": "defer" },
+        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+      ],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    },
+    "cv": {
+      "route": "cv",
+      "title": "JM Potvin | CV",
+      "ogtitle": "Jean-Mathieu Potvin | CV",
+      "ogurl": "https://jm.potvin.xyz/cv",
+      "scripts": [
+        { "src": "/javascripts/main.js", "defer": "defer" },
+        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+      ],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    },
+    "projects": {
+      "route": "projects",
+      "title": "JM Potvin | Projects",
+      "ogtitle": "Jean-Mathieu Potvin | Projects",
+      "ogurl": "https://jm.potvin.xyz/projects",
+      "scripts": [
+        { "src": "/javascripts/main.js", "defer": "defer" },
+        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+      ],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    },
+    "blog": {
+      "route": "blog",
+      "title": "JM Potvin | Blog",
+      "ogtitle": "Jean-Mathieu Potvin | Blog",
+      "ogurl": "https://jm.potvin.xyz/blog",
+      "scripts": [],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    },
+    "error": {
+      "route": "404",
+      "title": "JM Potvin | 404",
+      "ogtitle": "",
+      "ogurl": "",
+      "scripts": [],
+      "links": [
+        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
+        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
+        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+      ]
+    }
   }
 }
