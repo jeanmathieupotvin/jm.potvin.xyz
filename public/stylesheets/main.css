@@ -407,7 +407,8 @@ html {
   /* Alter usual padding of pseudo-list */
   padding: 10px;
 }
-.page-nav a {
+.page-nav a,
+.page-nav .fas {
   color: var(--gray-lighter);
   text-decoration: none;
 }
