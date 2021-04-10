@@ -399,13 +399,17 @@ html {
   display: inline-block; /* Make container as big as its contents */
   position: sticky; /* Fixed position at top of cell */
   top: 0; left: 0;
-  margin: 20px 20px 20px 20px; /* This acts as a pseudo-padding */
+  margin: 32px 20px 20px 20px; /* This acts as a pseudo-padding */
   font-size: 1rem; /* Scaling relative to document level */
   line-height: 2;
 }
 .page-nav.nolist {
   /* Alter usual padding of pseudo-list */
   padding: 10px;
+}
+.page-nav > li:first-child {
+  color: var(--gray-light);
+  font-weight: 700;
 }
 .page-nav a,
 .page-nav .fas {
