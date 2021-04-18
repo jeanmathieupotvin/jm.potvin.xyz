@@ -1,0 +1,3 @@
+[submodule "lib/htmlattrstring"]
+	path = lib/htmlattrstring
+	url = https://github.com/jeanmathieupotvin/htmlattrstring.git
