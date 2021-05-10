@@ -2,6 +2,9 @@
 node_modules/
 jspm_packages/
 
+# Environment variables
+*.env
+
 # Minified files
 public/stylesheets/*.min.css
 public/javascripts/*.min.css

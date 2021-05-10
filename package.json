@@ -1,6 +1,6 @@
 {
   "name": "jm.potvin.xyz",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The personal website of Jean-Mathieu Potvin",
   "author": "Jean-Mathieu Potvin",
   "license": "All Rights Reserved",
@@ -24,14 +24,15 @@
     "url": "https://github.com/jeanmathieupotvin/jm.potvin.xyz/issues"
   },
   "scripts": {
-    "start": "node ./bin/www",
-    "devstart": "nodemon ./bin/www",
-    "serverstart": "set DEBUG=express:* & node ./bin/www",
+    "start": "node -r dotenv/config ./bin/www",
+    "devstart": "nodemon -r dotenv/config ./bin/www",
+    "serverstart": "set DEBUG=express:* & node -r dotenv/config ./bin/www",
     "minifycss": "postcss ./public/stylesheets/main.css > ./public/stylesheets/main.min.css",
     "minifynorm": "postcss ./public/stylesheets/normalize.css > ./public/stylesheets/normalize.min.css"
   },
   "dependencies": {
     "debug": "~2.6.9",
+    "dotenv": "^9.0.1",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "is-svg": ">=4.2.2",
@@ -49,15 +50,39 @@
       "ogtitle": "Jean-Mathieu Potvin | Home",
       "ogurl": "https://jm.potvin.xyz",
       "scripts": [
-        { "src": "/javascripts/main.js", "defer": "defer" },
-        { "src": "/javascripts/index.js", "defer": "defer" },
-        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+        {
+          "src": "/javascripts/main.js",
+          "defer": "defer"
+        },
+        {
+          "src": "/javascripts/index.js",
+          "defer": "defer"
+        },
+        {
+          "src": "https://kit.fontawesome.com/1a9c86e038.js",
+          "crossorigin": "anonymous"
+        }
       ],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     },
     "about": {
@@ -66,14 +91,35 @@
       "ogtitle": "Jean-Mathieu Potvin | About me",
       "ogurl": "https://jm.potvin.xyz/about",
       "scripts": [
-        { "src": "/javascripts/main.js", "defer": "defer" },
-        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+        {
+          "src": "/javascripts/main.js",
+          "defer": "defer"
+        },
+        {
+          "src": "https://kit.fontawesome.com/1a9c86e038.js",
+          "crossorigin": "anonymous"
+        }
       ],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     },
     "cv": {
@@ -82,14 +128,35 @@
       "ogtitle": "Jean-Mathieu Potvin | CV",
       "ogurl": "https://jm.potvin.xyz/cv",
       "scripts": [
-        { "src": "/javascripts/main.js", "defer": "defer" },
-        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+        {
+          "src": "/javascripts/main.js",
+          "defer": "defer"
+        },
+        {
+          "src": "https://kit.fontawesome.com/1a9c86e038.js",
+          "crossorigin": "anonymous"
+        }
       ],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     },
     "projects": {
@@ -98,14 +165,35 @@
       "ogtitle": "Jean-Mathieu Potvin | Projects",
       "ogurl": "https://jm.potvin.xyz/projects",
       "scripts": [
-        { "src": "/javascripts/main.js", "defer": "defer" },
-        { "src": "https://kit.fontawesome.com/1a9c86e038.js", "crossorigin": "anonymous" }
+        {
+          "src": "/javascripts/main.js",
+          "defer": "defer"
+        },
+        {
+          "src": "https://kit.fontawesome.com/1a9c86e038.js",
+          "crossorigin": "anonymous"
+        }
       ],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     },
     "blog": {
@@ -115,10 +203,25 @@
       "ogurl": "https://jm.potvin.xyz/blog",
       "scripts": [],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     },
     "error": {
@@ -128,10 +231,25 @@
       "ogurl": "",
       "scripts": [],
       "links": [
-        { "rel": "preconnect", "href": "https://fonts.gstatic.com" },
-        { "rel": "stylesheet", "media": "all", "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/normalize.min.css" },
-        { "rel": "stylesheet", "media": "all", "href": "/stylesheets/main.min.css" }
+        {
+          "rel": "preconnect",
+          "href": "https://fonts.gstatic.com"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/normalize.min.css"
+        },
+        {
+          "rel": "stylesheet",
+          "media": "all",
+          "href": "/stylesheets/main.min.css"
+        }
       ]
     }
   }
